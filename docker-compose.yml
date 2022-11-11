@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   database:
-    container_name: blog-challenge-db
+    container_name: ${PG_DB_NAME}
     image: postgres
     ports:
       - ${PG_PORT}:5432
