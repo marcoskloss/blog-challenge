@@ -12,7 +12,7 @@
 
 import 'reflect-metadata'
 import sourceMapSupport from 'source-map-support'
-import { Ignitor } from '@adonisjs/core/build/standalone'
+import { Ignitor } from './node_modules/@adonisjs/core/build/standalone'
 
 sourceMapSupport.install({ handleUncaughtExceptions: false })
 
