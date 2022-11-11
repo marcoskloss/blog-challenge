@@ -9,4 +9,10 @@ export default class PostsController {
     response.status(201)
     return post.toJSON()
   }
+
+  public async show({ request }: HttpContextContract) {
+    const postId = request.param('id')
+    const post = await Post.findByOrFail('id', postId)
+    return post.toJSON()
+  } 
 }
