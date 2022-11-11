@@ -18,6 +18,6 @@ export default class PostsController {
 
   public async index() {
     const posts = await Post.query().orderBy('createdAt', 'asc')
-    return posts.map(post => post.toJSON())
+    return posts.map((post) => post.toJSON())
   }
 }

@@ -17,7 +17,7 @@ test('should return all saved Posts ordered by creation date', async ({ client }
   const response = await client.get(postRoute)
 
   response.assertStatus(200)
-  response.assertBodyContains(posts.map(post => post.toJSON()))
+  response.assertBodyContains(posts.map((post) => post.toJSON()))
 })
 
 test('should return an empty list if no Post is found', async ({ client }) => {

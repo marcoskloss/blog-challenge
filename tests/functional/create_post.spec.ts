@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { test } from '@japa/runner'
 import PostFactory from 'Database/factories/PostFactory'
 import { getPostRoute } from '../testHelpers/routes'
