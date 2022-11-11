@@ -14,5 +14,10 @@ export default class PostsController {
     const postId = request.param('id')
     const post = await Post.findByOrFail('id', postId)
     return post.toJSON()
-  } 
+  }
+
+  public async index() {
+    const posts = await Post.query().orderBy('createdAt', 'asc')
+    return posts.map(post => post.toJSON())
+  }
 }
